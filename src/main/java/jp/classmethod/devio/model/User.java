@@ -1,5 +1,6 @@
 package jp.classmethod.devio.model;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -16,8 +17,9 @@ import javax.validation.constraints.NotNull;
 public class User {
 	
 	@NotNull
-	String id;
+	@JsonProperty("user_id")
+	String userId;
 	
 	@NotNull
-	String name;
+	String username;
 }
