@@ -42,7 +42,7 @@ public class UserService {
 	public User getUser(String userId) {
 		try {
 			Table table = dynamoDB.getTable(configprop.getTableName());
-			Item item = table.getItem("id", userId);
+			Item item = table.getItem("user_id", userId);
 			return objectMapper.convertValue(item.asMap(), User.class);
 		} catch(Exception e) {
 			log.error("getUser error.", e);
@@ -53,8 +53,8 @@ public class UserService {
 	public User registerUser(User user) {
 		try {
 			Table table = dynamoDB.getTable(configprop.getTableName());
-			Item item = new Item().withPrimaryKey("id", user.getUserId())
-				.withString("name", user.getUsername());
+			Item item = new Item().withPrimaryKey("user_id", user.getUserId())
+				.withString("username", user.getUsername());
 			table.putItem(new PutItemSpec().withItem(item));
 			return user;
 		} catch(Exception e) {

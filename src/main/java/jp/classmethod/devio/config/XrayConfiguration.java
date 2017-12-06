@@ -3,11 +3,10 @@ package jp.classmethod.devio.config;
 import com.amazonaws.services.dynamodbv2.AmazonDynamoDB;
 import com.amazonaws.services.dynamodbv2.AmazonDynamoDBClientBuilder;
 import com.amazonaws.services.dynamodbv2.document.DynamoDB;
-import com.amazonaws.services.dynamodbv2.document.Table;
 import com.amazonaws.xray.javax.servlet.AWSXRayServletFilter;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import jp.classmethod.devio.configprops.DynamoDBConfigurationProperties;
-import lombok.NonNull;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.context.annotation.Bean;
@@ -22,6 +21,7 @@ import java.util.Collections;
  * @since version
  */
 @Configuration
+@Slf4j
 public class XrayConfiguration {
 	
 	@Autowired

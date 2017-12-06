@@ -35,6 +35,7 @@ dependencies {
 	compile('com.amazonaws:aws-xray-recorder-sdk-core:1.2.0')
 	compile("com.amazonaws:aws-xray-recorder-sdk-aws-sdk:1.2.0")
 	compile("com.amazonaws:aws-xray-recorder-sdk-aws-sdk-instrumentor:1.2.0")
+	compile("com.amazonaws:aws-xray-recorder-sdk-sql-mysql:1.2.0")
 
 	compile("com.amazonaws:aws-java-sdk-dynamodb:1.11.218")
 	

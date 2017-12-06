@@ -1,6 +1,7 @@
 package jp.classmethod.devio.configprops;
 
 import lombok.Data;
+import org.springframework.boot.autoconfigure.jdbc.DataSourceBuilder;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 
@@ -18,4 +19,5 @@ public class DynamoDBConfigurationProperties {
 	private String tableName;
 	
 	private String region;
+	
 }
